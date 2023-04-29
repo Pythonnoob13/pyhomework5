@@ -11,3 +11,19 @@ while sandwich_orders:
 print('\nthe following sandwiches have been made')
 for sandwich in finished_sandwiches:
     print( sandwich.title())
+
+
+
+dream_vacations = {}
+poll_active = True
+while poll_active:
+
+    name = input('what is your name?: ')
+    question = input('If you could visit one place in the world, where would you go?: ')
+    dream_vacations[name] = question
+    repeat = input('whould you like poll to be continued? yes/no?: ').lower()
+    if repeat == 'no':
+        poll_active = False
+print('\n---Poll reasuels---')
+for name, vacation in dream_vacations.items():
+    print(f"{name}'s dream vacation is {vacation}")
